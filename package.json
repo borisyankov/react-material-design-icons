@@ -3,7 +3,7 @@
   "version": "0.8.0",
   "scripts": {
     "build": "gulp",
-    "prepublish": "gulp",
+    "prepublish": "gulp"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
