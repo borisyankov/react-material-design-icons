@@ -2,8 +2,8 @@ import React from 'react';
 
 const style = {
    display: 'inline-block',
-   height: 24,
-   width: 24,
+   height: 16,
+   width: 16,
 };
 
 export default ({
@@ -14,6 +14,7 @@ export default ({
 }) => (
     <svg
         fill={color}
+        viewBox="0 0 24 24"
         className={['react-material-design-icon', className].join(' ')}
         style={style}
         {...rest}
