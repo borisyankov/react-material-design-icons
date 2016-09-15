@@ -34,9 +34,9 @@ gulp.task('icons', ['clone'], () =>
     gulp.src(config.sourceFiles)
         .pipe(replace(/(<svg[^>]*>)([\s\S]*)(<\/svg>)/g, templateParts[1] + '$2' + templateParts[3]))
         .pipe(rename(path => {
-            const core = path.basename.match(/ic_(.*)_(26x)?24px/)[1];
-            path.basename = core.replace(/(^.)|_([a-z])/g, x => x.slice(-1).toUpperCase());
-            path.extname = '.js';
+            if (config.renamer) {
+                config.renamer(path);
+            }
             console.log(path.basename);
         }))
         .pipe(flatten())
