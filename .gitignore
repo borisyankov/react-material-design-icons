@@ -7,8 +7,10 @@ node_modules
 coverage
 
 # production
-build
+icons
 
 # misc
 .DS_Store
 npm-debug.log
+
+material-design-icons/
